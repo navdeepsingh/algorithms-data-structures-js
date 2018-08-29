@@ -1,0 +1,22 @@
+{
+  "name": "algorithms-data-structures",
+  "version": "1.0.0",
+  "description": "Algorithms & Data Structures in Javascript!",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navdeepsingh/algorithms-data-structures-js.git"
+  },
+  "author": "Navdeep Singh <navdeep.er@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navdeepsingh/algorithms-data-structures-js/issues"
+  },
+  "homepage": "https://github.com/navdeepsingh/algorithms-data-structures-js#readme",
+  "dependencies": {
+    "eslint": "^5.4.0"
+  }
+}
