@@ -20,3 +20,11 @@ Step2: Run Jest into the targeted test such as
 ```bash
 jest 001-reversestring/test.js --watch
 ```
+
+## Debugger Steps
+- Add a debugger statement in your function
+- Call the function manually
+- At the terminal, run `node inspect index.js`
+- To continue execution of file, press `c` then `enter`
+- To launch repl (Read Evaluate Print Loop) sessoion, type `repl` then `enter`
+- To exit the repl, Press Ctrl + C
