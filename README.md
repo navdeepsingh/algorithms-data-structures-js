@@ -20,6 +20,11 @@ Step2: Run Jest into the targeted test such as
 ```bash
 jest 001-reversestring/test.js --watch
 ```
+or
+```bash
+npm test 001-reversestring/test.js
+```
+
 
 ## Debugger Steps
 - Add a debugger statement in your function
