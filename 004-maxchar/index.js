@@ -1,11 +1,19 @@
 // Solution 1
 const maxChar1 = (str) => {
   const charMap = {};
-  str.split('').map(char => {
-    console.log(char);    
+  let max = 0;
+  let maxChar = '';
+  // Break the string into array
+  // Loop thru each character 
+  // Add character and it count in new object
+  str.split('').map(char => {  
     charMap[char] = charMap[char] + 1 || 1;
+    if (charMap[char] > max) {
+      max = charMap[char];
+      maxChar = char;
+    }
   });
-  console.log(charMap);  
+  return maxChar;
 }
 
 // Solution 1
