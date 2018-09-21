@@ -1,6 +1,6 @@
 # Algorithms & Data Structures in JavaScript.
 
-This repo is to track my learnings [from this tutorial](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/) by [Stephen Grider](https://twitter.com/ste_grider).
+This repo is to track my learnings [from this tutorial](https://www.udemy.com/coding-interview-bootcamp-algorithms-and-data-structure/) by [Stephen Grider](https://twitter.com/ste_grider) And Following repo from [https://github.com/IamManchanda/algorithms-javascript](https://github.com/IamManchanda/algorithms-javascript) by [Harman Manchanda] (https://twitter.com/harmanmanchanda)
 
 ## Questions and their respective Answers. And Tests.
 - **Question:** All folders have specific `README.md` where respective question has been asked.
