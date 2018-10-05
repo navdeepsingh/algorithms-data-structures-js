@@ -1,14 +1,23 @@
+const cleanString = (str) => str.replace(/[^\w+]/g, '').toLowerCase(); // Helper function
+const sortString = (str) => cleanString(str).split('').sort().join(''); // helper Function
+
 // Solution 1
-const anagrams = (str1, str2) => {
-  // http://jsbin.com/zubawixime/edit?js,console
-  str1 = str1.replace(/[^\w]/g, '').toLowerCase();
-  str2 = str2.replace(/[^\w]/g, '').toLowerCase();
-  charCount1 = [];
-  [...str1].map(char => {
-    charCount1[char] = charCount1[char] + 1 || 1;
-  });
-  //console.log(charCount1);
+const buildCharMap = (str) => { // Helper Function
+	const charMap = {};
+	for (const char of cleanString(str)) charMap[char] = charMap[char] + 1 || 1;
+	return charMap;
+};
+const anagrams = (stringA, stringB) => {
+	const aCharMap = buildCharMap(stringA);
+	const bCharMap = buildCharMap(stringB);
+	if (Object.keys(aCharMap).length !== Object.keys(bCharMap).length) return false;
+	for (const char in aCharMap) if (aCharMap[char] !== bCharMap[char]) return false;
+	return true;
 }
 
+// Solution 2
+const anagrams2 = (stringA, stringB) => {
+	return sortString(stringA) === sortString(stringB);
+}
 
-module.exports = anagrams;
+module.exports = anagrams2;
