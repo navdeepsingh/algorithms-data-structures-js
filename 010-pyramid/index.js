@@ -18,20 +18,23 @@ const pyramid1 = (n) => {
 }
 
 // Solution 2
-//steps(3)
-const steps2 = (n, row = 0, stair = '') => {
+// Recursion Solution
+const pyramid2 = (n, row = 0, level = '') => {
+	const totalColumns = n + (n - 1);
+	const midpoint = Math.floor(totalColumns / 2);
 	// Set base case
 	if (n === row) return;
 
-	if (n === stair.length) {
-		console.log(stair);
-		return steps2(n, row + 1);
+	// Check when we need call function recursively or when end of row
+	if (level.length === totalColumns) {
+		console.log(level);
+		return pyramid2(n, row + 1);
 	}
 
-	const add = (stair.length <= row) ? '#' : ' ';
+	const add = (midpoint - row <= level.length && midpoint + row >= level.length) ? '#' : ' ';
 
-	steps2(n, row, stair + add);
+	pyramid2(n, row, level + add);
 }
 
 
-module.exports = pyramid1;
+module.exports = pyramid2;
