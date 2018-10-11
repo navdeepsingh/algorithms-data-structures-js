@@ -1,15 +1,21 @@
 // Solution 1
-const vowels = (string) => {
+const vowels1 = (string) => {
 	let vowelsCount = 0; 
-	const vowelsArray = ['a','e','i','o','u'];
+	const vowelsChecker = 'aieou';
 	string.toLowerCase().split('').map(char => {
-		if(vowelsArray.includes(char)) {
+		if (vowelsChecker.includes(char)) {
 			vowelsCount++;
 		}
 	});
 	return vowelsCount;
 }
 
+// Solution 2
+const vowels2 = (string) => {
+	const matches = string.match(/[aeiou]/gi);
+	return matches ? matches.length : 0;
+}
 
 
-module.exports = vowels;
+
+module.exports = vowels2;
