@@ -1,5 +1,5 @@
 // Solution 1
-// Iteration and Linear Runtime Complexity 
+// Iteration & Linear Runtime Complexity => O(n)
 const fibonacci1 = (n) => {
 	let results = [0,1];
 	for(let i = 2; i <= n; i++ ){
@@ -9,11 +9,10 @@ const fibonacci1 = (n) => {
 }
 
 // Solution 2
-// Recursive Solution
+// Recursive Solution & Exponential => O(2 ** n)
 const fibonacci2 = (n) => {
 	// Set Base Case
 	if (n < 2) return n;
-
 	return fibonacci2(n - 1) + fibonacci2(n-2);
 }
 
