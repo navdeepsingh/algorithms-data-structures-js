@@ -16,4 +16,22 @@ const fibonacci2 = (n) => {
 	return fibonacci2(n - 1) + fibonacci2(n-2);
 }
 
-module.exports = fibonacci2;
+// Solution 3
+// Linear Complexity
+const memoize = (fn) => { // Utility Function
+	const cache = {};
+	return (...args) => {
+		if (cache[args]) { return cache[args]; }
+		cache[args] = fn.apply(this, args);
+		return cache[args];
+	};
+};
+
+let fibonacci3 = (n) => {
+	if (n < 2) return n;
+	return fibonacci3(n - 1) + fibonacci3(n - 2);
+}
+fibonacci3 = memoize(fibonacci3);
+
+const fibonacci = fibonacci3;
+module.exports = fibonacci;
